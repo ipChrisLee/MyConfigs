@@ -1,2 +1,2 @@
-cp -r homeConfigs.bk/ ~/
+cp -a homeConfigs.bk/. ~/
 cp .gitconfig ~/
