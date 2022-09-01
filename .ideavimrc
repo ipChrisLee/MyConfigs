@@ -35,6 +35,7 @@ nnoremap `s :action ActivateStructureToolWindow<CR>
 nnoremap `a :action ActivateANTLRPreviewToolWindow<CR>
 nnoremap `pv :action ActivateProblemsViewToolWindow<CR>
 nnoremap `cm :action CMake.ToolsMenu<CR>
+nnoremap `cg :action Cargo.RunCargoCommand<CR>
 nnoremap `t :action ActivateTerminalToolWindow<CR>
 nnoremap `d :action ActivateDebugToolWindow<CR>
 nnoremap `hg :action HierarchyGroup<CR>
