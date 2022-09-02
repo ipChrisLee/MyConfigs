@@ -8,6 +8,7 @@ export AM_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/abstract-machine"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+alias find=gfind
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
