@@ -5,6 +5,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 export NEMU_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nemu"
 export AM_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/abstract-machine"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
