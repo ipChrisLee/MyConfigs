@@ -6,9 +6,13 @@ export ZSH="$HOME/.oh-my-zsh"
 export NEMU_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nemu"
 export AM_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/abstract-machine"
 export NPC_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/npc"
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
+export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/ruby/include $CPPFLAGS"
+export CPPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig:$PKG_CONFIG_PATH"
 alias find=gfind
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
