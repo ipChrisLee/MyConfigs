@@ -3,16 +3,24 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# ysyx
 export NEMU_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nemu"
 export AM_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/abstract-machine"
 export NPC_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/npc"
 export NVBOARD_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nvboard"
+
+# gem5
+export M5="$HOME/Main/App/gem5"
+
+# exe path
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="$HOME/Main/App/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+
 export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
 export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib $LDFLAGS"
