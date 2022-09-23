@@ -1,9 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
 # ysyx
 export NEMU_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nemu"
 export AM_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/abstract-machine"
@@ -14,40 +8,68 @@ export NVBOARD_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nvboard"
 export M5="$HOME/Main/App/gem5"
 
 # exe path
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"					# llvm
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="$HOME/Main/App/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/anaconda3/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:$PATH" 				# anaconda
+export PATH="/usr/local/opt/riscv-gnu-toolchain/bin:$PATH"	# riscv-gnu-toolchain
 
 export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
 export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib $LDFLAGS"
 export LDFLAGS="-undefined dynamic_lookup $LDFLAGS"
+
 export CPPFLAGS="-I/usr/local/opt/ruby/include $CPPFLAGS"
 export CPPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include $CPPFLAGS"
+
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
+
 # Antlr support
 export CLASSPATH=".:/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPATH"
 alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
 alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
+
 # use gfind other than find
 alias find=gfind
 
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
-
 export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
+GRAPHVIZ_DOT="/usr/local/lib/ruby/gems/3.1.0/bin"
 
+# zsh settings
+ZSH_THEME="nanotech"
+plugins=(git)
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+
+
+# For anaconda support
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# ---------------- origin content of zshrc --------------------
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="nanotech"
-GRAPHVIZ_DOT="/usr/local/lib/ruby/gems/3.1.0/bin"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -109,10 +131,8 @@ GRAPHVIZ_DOT="/usr/local/lib/ruby/gems/3.1.0/bin"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -138,19 +158,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# For anaconda support
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
