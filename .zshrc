@@ -20,6 +20,7 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="$HOME/Main/App/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:$PATH"
 
 export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
 export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
@@ -38,6 +39,8 @@ alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPA
 alias find=gfind
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+
+export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
