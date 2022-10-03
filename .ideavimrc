@@ -24,6 +24,7 @@ nnoremap <leader>b :buffers<CR>:buffer<Space>
 nnoremap <leader>pe :action GotoPreviousError<CR>
 nnoremap <leader>ne :action GotoNextError<CR>
 nnoremap <leader>se :action ShowErrorDescription<CR>
+nnoremap <leader>fu :action FindUsages<CR>
 " <leader> + upper letter : edit file by using IDE support.
 nnoremap <leader>R :action RefactoringMenu<CR>
 nnoremap <leader>G :action Generate<CR>
