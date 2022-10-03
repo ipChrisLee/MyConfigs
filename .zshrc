@@ -15,7 +15,8 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="$HOME/Main/App/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/anaconda3/bin:$PATH" 				# anaconda
-export PATH="/usr/local/opt/riscv-gnu-toolchain/bin:$PATH"	# riscv-gnu-toolchain
+# export PATH="/usr/local/opt/riscv-gnu-toolchain/bin:$PATH"	# riscv-gnu-toolchain
+export PATH="/opt/riscv/bin:$PATH"
 
 export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
 export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
