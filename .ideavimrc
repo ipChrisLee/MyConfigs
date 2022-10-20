@@ -42,6 +42,7 @@ nnoremap `d :action ActivateDebugToolWindow<CR>
 nnoremap `hg :action HierarchyGroup<CR>
 nnoremap `ha :action ActivateHierarchyToolWindow<CR>
 nnoremap `git :action Git.MainMenu<CR>
+nnoremap `ntf :action ActivateNotificationsToolWindow<CR>
 " \ + keyword : run/debug settings
 nnoremap \\run :action Run<CR>
 nnoremap \\debug :action Debug<CR>
