@@ -1,8 +1,6 @@
 [user]
 	name = ChrisLee
 	email = chirsleecn@outlook.com
-[cor]
-	editor = vim
 [color]
 	ui = true
 [alias]
@@ -18,5 +16,6 @@
 	helper = !/usr/bin/gh auth git-credential
 [core]
 	autocrlf = input
+	editor = vim
 [http]
 	postBuffer = 1048576000

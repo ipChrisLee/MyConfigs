@@ -43,7 +43,13 @@ GRAPHVIZ_DOT="/usr/local/lib/ruby/gems/3.1.0/bin"
 
 # zsh settings
 ZSH_THEME="nanotech"
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+	history
+	web-search
+	zsh-syntax-highlighting
+)
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
