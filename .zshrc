@@ -1,42 +1,7 @@
-# ysyx
-export NEMU_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nemu"
-export AM_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/abstract-machine"
-export NPC_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/npc"
-export NVBOARD_HOME="$HOME/Main/Proj/ysyx/ysyx-workbench/nvboard"
-
-# gem5
-export M5="$HOME/Main/App/gem5"
-
-# exe path
-export PATH="/usr/local/opt/llvm/bin:$PATH"					# llvm
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+# Main App
 export PATH="$HOME/Main/App/bin:$PATH"
+
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/anaconda3/bin:$PATH" 				# anaconda
-# export PATH="/usr/local/opt/riscv-gnu-toolchain/bin:$PATH"	# riscv-gnu-toolchain
-export PATH="/opt/riscv/bin:$PATH"
-
-export LDFLAGS="-L/usr/local/opt/llvm/lib $LDFLAGS"
-export LDFLAGS="-L/usr/local/opt/ruby/lib $LDFLAGS"
-export LDFLAGS="-L/usr/local/opt/icu4c/lib $LDFLAGS"
-export LDFLAGS="-undefined dynamic_lookup $LDFLAGS"
-
-export CPPFLAGS="-I/usr/local/opt/ruby/include $CPPFLAGS"
-export CPPFLAGS="-I/usr/local/opt/llvm/include $CPPFLAGS"
-export CPPFLAGS="-I/usr/local/opt/icu4c/include $CPPFLAGS"
-
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
-
-# Antlr support
-export CLASSPATH=".:/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPATH"
-alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.11.1-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
-
-export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
-GRAPHVIZ_DOT="/usr/local/lib/ruby/gems/3.1.0/bin"
 
 # zsh settings
 ZSH_THEME="nanotech"
