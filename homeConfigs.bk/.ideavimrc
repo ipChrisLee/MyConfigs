@@ -1,1 +1,60 @@
-source ~/Main/configs/.ideavimrc
+"" Source your .vimrc
+" source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=3
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+" map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+let mapleader = ";"
+" <leader> + f + keyword : IDE function
+nnoremap <leader>freload :action IdeaVim.ReloadVimRc.reload<CR>
+" <leader> + lower letter : for file edit.
+nnoremap <leader>r :reg<CR>
+nnoremap <leader>b :buffers<CR>:buffer<Space>
+nnoremap <leader>pe :action GotoPreviousError<CR>
+nnoremap <leader>ne :action GotoNextError<CR>
+nnoremap <leader>se :action ShowErrorDescription<CR>
+nnoremap <leader>fu :action FindUsages<CR>
+" <leader> + upper letter : edit file by using IDE support.
+nnoremap <leader>R :action RefactoringMenu<CR>
+nnoremap <leader>G :action Generate<CR>
+nnoremap <leader>L :action InsertLiveTemplate<CR>
+nnoremap <leader>O :action OverrideMethods<CR>
+" ` + keyword : setting of IDE window
+nnoremap `ps :action ActivateProjectToolWindow<CR>
+nnoremap `s :action ActivateStructureToolWindow<CR>
+nnoremap `a :action ActivateANTLRPreviewToolWindow<CR>
+nnoremap `pv :action ActivateProblemsViewToolWindow<CR>
+nnoremap `cm :action CMake.ToolsMenu<CR>
+nnoremap `cg :action Cargo.RunCargoCommand<CR>
+nnoremap `t :action ActivateTerminalToolWindow<CR>
+nnoremap `d :action ActivateDebugToolWindow<CR>
+nnoremap `hg :action HierarchyGroup<CR>
+nnoremap `ha :action ActivateHierarchyToolWindow<CR>
+nnoremap `git :action Git.MainMenu<CR>
+nnoremap `ntf :action ActivateNotificationsToolWindow<CR>
+" \ + keyword : run/debug settings
+nnoremap \\run :action Run<CR>
+nnoremap \\debug :action Debug<CR>
+nnoremap \\build :action Build<CR>
+nnoremap \\stop :action Stop<CR>
+nnoremap \\break :action BreakpointActionsGroup<CR>
+nnoremap \\step :action StepIntoMyCode<CR>
+nnoremap \\next :action StepOver<CR>
+nnoremap \\resume :action Resume<CR>
+nnoremap \\eval :action EvaluateExpression<CR>
+nnoremap \\watch :action XDebugger.Watches.Tree.Popup<CR>
+nnoremap \\crun :action ChooseRunConfiguration<CR>
+nnoremap \\cdebug :action ChooseDebugConfiguration<CR>
+nnoremap \\config :action RunConfiguration<CR>
+
