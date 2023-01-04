@@ -1,5 +1,8 @@
+# Main config
+export MAIN_APP_BIN="${HOME}/Main/App/bin"
+
 # Main App
-export PATH="$HOME/Main/App/bin:$PATH"
+export PATH="${MAIN_APP_BIN}:$PATH"
 
 export PATH="/usr/local/bin:$PATH"
 
@@ -33,6 +36,20 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Added by Toolbox App
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+
+# Added to support flatpak
+XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
+
+# >>> coursier install directory >>>
+export PATH="$PATH:$HOME/.local/share/coursier/bin"
+# <<< coursier install directory <<<
+#
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # ---------------- origin content of zshrc --------------------
 # Set name of the theme to load --- if set to "random", it will
